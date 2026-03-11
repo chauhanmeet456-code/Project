@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>STUDENT REGISTRATION FORM</title>
+<link rel="stylesheet" href="Registeration.css">
+
+</head>
+
+<body>
+
+<h1>STUDENT REGISTRATION FORM</h1>
+
+<div class="form-box">
+
+<table class="form-table">
+
+<tr>
+<td><b>Name</b></td>
+<td>
+<input type="text" id="name">
+<div id="nameError" class="error"></div>
+</td>
+</tr>
+
+<tr>
+<td><b>Age</b></td>
+<td>
+<input type="number" id="age">
+</td>
+</tr>
+
+<tr>
+<td><b>Gender</b></td>
+<td class="gender">
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+</td>
+</tr>
+
+<tr>
+<td><b>Course</b></td>
+<td>
+<select id="course">
+<option>JavaScript</option>
+<option>Python</option>
+<option>Java</option>
+<option>C++</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><b>E-mail</b></td>
+<td>
+<input type="text" id="email">
+<div id="emailError" class="error"></div>
+</td>
+</tr>
+
+</table>
+
+<button onclick="saveStudent()">Save</button>
+
+</div>
+
+
+<table id="studentTable">
+
+<tr>
+<th>NAME</th>
+<th>AGE</th>
+<th>COURSE</th>
+<th>GENDER</th>
+<th>EMAIL</th>
+<th>ACTION</th>
+</tr>
+
+</table>
+
+<script src="Registeration.js"></script>
+
+</body>
+</html>

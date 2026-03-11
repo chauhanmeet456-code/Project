@@ -1,0 +1,72 @@
+body{
+  font-family: Arial, sans-serif;
+  background:#f2f2f2;
+  padding:15px;
+}
+.card{
+  background:#fff;
+  max-width:420px;
+  margin:auto;
+  padding:16px;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+h2{margin-bottom:15px}
+input,button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+button{
+  background:#00bcd4;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+button.secondary{background:#00acc1;}
+.select-box{
+  border:1px solid #ccc;
+  padding:12px;
+  border-radius:8px;
+  margin-top:10px;
+  cursor:pointer;
+  background:#fff;
+}
+#result{
+  margin-top:12px;
+  font-weight:bold;
+}
+
+/* Popup */
+/* Popup Background */
+.popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  display:none;
+
+  /* IMPORTANT FIX */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+/* Popup Box */
+.popup-box{
+  background:#fff;
+  width:100%;
+  max-width:420px;
+  max-height:80vh;
+  border-radius:16px;
+  padding:15px;
+  overflow-y:auto;
+  animation:fadeIn .3s ease;
+}
+
+.popup{
+  display:none;
+}

@@ -1,0 +1,145 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+/* DARK MODE */
+:root{
+--bg:#0d0d0d;
+--card:rgba(255,255,255,0.1);
+--text:#ffffff;
+--border:rgba(255,255,255,0.5);
+--neon:#00ffff;
+}
+
+/* LIGHT MODE */
+body.light{
+--bg:#f2f4f8;
+--card:#ffffff;
+--text:#000000;
+--border:#cccccc;
+--neon:#00bcd4;
+}
+
+/* BODY */
+body{
+background:var(--bg);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--text);
+transition:0.4s;
+}
+
+/* FORM */
+.form-container{
+width:320px;
+background:var(--card);
+padding:40px 30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+position:relative;
+}
+
+/* HEADING */
+h2{
+margin-bottom:20px;
+}
+
+/* INPUT BOX */
+.input-box{
+position:relative;
+margin:20px 0;
+}
+
+/* INPUT */
+.input-box input{
+width:100%;
+padding:12px 40px 12px 15px;
+background:transparent;
+border:none;
+outline:none;
+font-size:16px;
+color:var(--text);
+border-bottom:2px solid var(--border);
+}
+
+/* INPUT FOCUS */
+.input-box input:focus{
+border-color:var(--neon);
+}
+
+/* FLOAT LABEL */
+.input-box span{
+position:absolute;
+left:15px;
+top:50%;
+transform:translateY(-50%);
+font-size:14px;
+color:var(--border);
+pointer-events:none;
+transition:0.3s;
+}
+
+/* LABEL MOVE */
+.input-box input:focus + span,
+.input-box input:not(:placeholder-shown) + span{
+top:5px;
+font-size:12px;
+color:var(--neon);
+}
+
+/* PASSWORD BOX */
+.password-box{
+position:relative;
+}
+
+/* EYE ICON */
+.eye{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+font-size:20px;
+cursor:pointer;
+color:var(--neon);
+}
+
+/* BUTTON */
+.submit-btn{
+width:100%;
+margin-top:15px;
+padding:12px;
+border:none;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+color:#000;
+background:linear-gradient(90deg,var(--neon),#00ff80);
+}
+
+/* THEME BUTTON */
+.theme-btn{
+position:absolute;
+top:15px;
+right:15px;
+background:none;
+border:none;
+font-size:22px;
+cursor:pointer;
+color:var(--neon);
+}
+
+/* MOBILE */
+@media(max-width:480px){
+
+.form-container{
+width:100%;
+}
+
+}

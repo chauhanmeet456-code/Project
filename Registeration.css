@@ -1,0 +1,153 @@
+/* BODY */
+
+body{
+font-family: Arial;
+text-align:center;
+background:linear-gradient(135deg,#1abc9c,#16a085);
+}
+
+/* HEADING */
+
+h1{
+margin:40px;
+color:#ffdd57;
+letter-spacing:2px;
+text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* FORM BOX */
+
+.form-box{
+border:3px solid #ff9800;
+display:inline-block;
+padding:18px;
+width:390px;
+
+background:linear-gradient(135deg,#ffffff,#fff3e0);
+
+border-radius:14px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+transition:0.3s;
+}
+
+.form-box:hover{
+transform:scale(1.02);
+box-shadow:0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* FORM TABLE */
+
+.form-table{
+border-collapse:collapse;
+width:100%;
+}
+
+.form-table td{
+border:1px solid #ddd;
+padding:10px;
+text-align:left;
+}
+
+/* INPUT */
+
+.form-table input,
+.form-table select{
+padding:7px;
+border:1px solid #aaa;
+width:95%;
+border-radius:5px;
+outline:none;
+}
+
+.form-table input:focus,
+.form-table select:focus{
+border-color:#ff9800;
+box-shadow:0 0 5px rgba(255,152,0,0.5);
+}
+
+/* GENDER */
+
+.gender{
+display:flex;
+align-items:center;
+gap:10px;
+padding:6px;
+width:92%;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* SAVE BUTTON */
+
+button{
+background:linear-gradient(45deg,#ff9800,#ff5722);
+border:none;
+padding:10px;
+color:white;
+cursor:pointer;
+width:85%;
+margin-top:10px;
+border-radius:6px;
+font-weight:bold;
+font-size:15px;
+}
+
+button:hover{
+background:linear-gradient(45deg,#ff5722,#ff9800);
+}
+
+/* DATA TABLE */
+
+table{
+margin-top:30px;
+border-collapse:collapse;
+width:80%;
+margin-left:auto;
+margin-right:auto;
+background:white;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* TABLE HEADER */
+
+th{
+background:#16a085;
+color:white;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:10px;
+text-align:center;
+}
+
+/* TABLE ROW HOVER */
+
+tr:hover{
+background:#f5f5f5;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+background:#e74c3c;
+color:white;
+border:none;
+padding:6px 12px;
+cursor:pointer;
+border-radius:4px;
+}
+
+.delete-btn:hover{
+background:#c0392b;
+}
+
+/* ERROR */
+
+.error{
+color:red;
+font-size:12px;
+}
