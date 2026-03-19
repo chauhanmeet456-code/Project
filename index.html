@@ -10,7 +10,7 @@
 <style>
 body{
   margin:0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background:#f4f4f4;
   transition:0.3s;
 }
@@ -45,6 +45,7 @@ body{
   color:white;
   margin-left:20px;
   text-decoration:none;
+  font-size:16px;
 }
 
 .menu a:hover{
@@ -54,7 +55,7 @@ body{
 /* Hamburger */
 .hamburger{
   display:none;
-  font-size:22px;
+  font-size:24px;
   cursor:pointer;
 }
 
@@ -81,7 +82,6 @@ body{
 .search{
   text-align:center;
   margin:20px;
-  animation:fadeIn 1.5s ease;
 }
 
 input{
@@ -92,6 +92,7 @@ input{
 
 button{
   padding:10px;
+  cursor:pointer;
 }
 
 /* Cards */
@@ -111,25 +112,22 @@ button{
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
   transition:0.3s;
-  animation:slideUp 0.8s ease;
+  animation:slideUp 0.6s ease;
 }
 
 .card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
 }
 
-/* Icons */
 .card i{
   font-size:30px;
   margin-bottom:10px;
 }
 
-/* Dark cards */
 .dark .card{
   background:#1e1e1e;
 }
 
-/* Buttons */
 .card a{
   display:inline-block;
   margin-top:10px;
@@ -147,11 +145,11 @@ button{
 }
 
 @keyframes slideUp{
-  from{transform:translateY(50px); opacity:0;}
+  from{transform:translateY(40px); opacity:0;}
   to{transform:translateY(0); opacity:1;}
 }
 
-/* Responsive */
+/* MOBILE */
 @media(max-width:768px){
 
   .menu{
@@ -162,11 +160,11 @@ button{
     top:60px;
     left:0;
     width:100%;
+    text-align:center;
   }
 
   .menu a{
     margin:15px 0;
-    text-align:center;
   }
 
   .menu.active{
@@ -196,7 +194,7 @@ button{
   </div>
 
   <div>
-    <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+    <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
     <button class="toggle" onclick="toggleMode()">🌙</button>
   </div>
 </div>
@@ -250,8 +248,13 @@ function toggleMode(){
 }
 
 function toggleMenu(){
-  document.getElementById("menu")
-          .classList.toggle("active");
+  const menu = document.getElementById("menu");
+  const icon = document.getElementById("hamburger");
+
+  menu.classList.toggle("active");
+
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
 }
 </script>
 
