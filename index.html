@@ -4,13 +4,12 @@
 <title>My Web Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background:#f4f4f4;
   transition:0.3s;
 }
@@ -64,7 +63,6 @@ body{
   padding:30px;
   background:#007BFF;
   color:white;
-  animation:fadeIn 1s ease;
 }
 
 /* Search */
@@ -81,7 +79,6 @@ input{
 
 button{
   padding:10px;
-  cursor:pointer;
 }
 
 /* Cards */
@@ -101,7 +98,6 @@ button{
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
   transition:0.3s;
-  animation:slideUp 0.6s ease;
 }
 
 .card:hover{
@@ -127,15 +123,20 @@ button{
   border-radius:5px;
 }
 
-/* Animations */
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-
-@keyframes slideUp{
-  from{transform:translateY(40px); opacity:0;}
-  to{transform:translateY(0); opacity:1;}
+/* 🔥 FLOATING DARK BUTTON */
+.dark-toggle{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#00bcd4;
+  color:white;
+  border:none;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
 }
 
 /* MOBILE */
@@ -180,9 +181,6 @@ button{
     <a href="registration.html">Register</a>
     <a href="calculator.html">Calculator</a>
     <a href="currency.html">Currency</a>
-
-    <!-- Dark Mode inside menu -->
-    <a href="#" onclick="toggleMode()">🌙 Dark Mode</a>
   </div>
 
   <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
@@ -191,7 +189,6 @@ button{
 <!-- Header -->
 <div class="header">
   <h1>My Web Project</h1>
-  <p>All tools in one place</p>
 </div>
 
 <!-- Search -->
@@ -230,6 +227,9 @@ button{
   </div>
 
 </div>
+
+<!-- 🔥 Floating Dark Mode Button -->
+<button class="dark-toggle" onclick="toggleMode()">🌙</button>
 
 <script>
 function toggleMode(){
