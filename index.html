@@ -1,23 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Search</title>
+<title>My Web Project</title>
 
 <style>
 body{
-font-family:Arial;
-text-align:center;
-margin-top:100px;
+  font-family: Arial;
+  margin:0;
+  background:#f4f4f4;
+}
+
+/* Navbar */
+.navbar{
+  background:#333;
+  padding:15px;
+  text-align:center;
+}
+
+.navbar a{
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-size:18px;
+}
+
+.navbar a:hover{
+  text-decoration:underline;
+}
+
+/* Header */
+.header{
+  text-align:center;
+  padding:40px;
+  background:#007BFF;
+  color:white;
+}
+
+/* Search */
+.search-box{
+  text-align:center;
+  margin:30px;
 }
 
 input{
-padding:8px;
-font-size:16px;
+  padding:10px;
+  width:250px;
 }
 
 button{
-padding:8px 12px;
-font-size:16px;
+  padding:10px;
+}
+
+/* Cards */
+.container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  width:220px;
+  text-align:center;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 15px;
+  background:#007BFF;
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+}
+
+.card a:hover{
+  background:#0056b3;
 }
 </style>
 
@@ -25,15 +88,53 @@ font-size:16px;
 
 <body>
 
-<form action="https://www.youtube.com/results">
-<input type="text" name="search_query" placeholder="Search YouTube">
-<button type="submit">Search</button>
-</form>
-<h1>My Web Project</h1>
+<!-- Navbar -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="login.html">Login</a>
+  <a href="registration.html">Register</a>
+  <a href="calculator.html">Calculator</a>
+  <a href="currency.html">Currency</a>
+</div>
 
-<a href="Login Page.html">Login Page</a><br>
-<a href="Registeration.html">Register</a><br>
-<a href="calculator.html">Calculator</a><br>
-<a href="currency.html">Currency Converter</a><br>
+<!-- Header -->
+<div class="header">
+  <h1>My Web Project</h1>
+  <p>Multiple tools in one place</p>
+</div>
+
+<!-- Search -->
+<div class="search-box">
+  <form action="https://www.youtube.com/results">
+    <input type="text" name="search_query" placeholder="Search YouTube">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<!-- Cards -->
+<div class="container">
+
+  <div class="card">
+    <h3>Login</h3>
+    <a href="login.html">Open</a>
+  </div>
+
+  <div class="card">
+    <h3>Register</h3>
+    <a href="registration.html">Open</a>
+  </div>
+
+  <div class="card">
+    <h3>Calculator</h3>
+    <a href="calculator.html">Open</a>
+  </div>
+
+  <div class="card">
+    <h3>Currency Converter</h3>
+    <a href="currency.html">Open</a>
+  </div>
+
+</div>
+
 </body>
 </html>
