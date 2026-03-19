@@ -28,6 +28,7 @@ body{
   background:#222;
   padding:15px 20px;
   color:white;
+  position: relative;
 }
 
 /* Logo */
@@ -51,15 +52,11 @@ body{
   color:#00bcd4;
 }
 
-/* Hamburger fix for top-right */
+/* Hamburger */
 .hamburger {
-  position: fixed; /* fixed top-right */
-  top: 20px;
-  right: 20px;
-  z-index: 1001;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
-  display: none; /* desktop hide */
+  display: none;
 }
 
 /* Header */
@@ -84,6 +81,7 @@ input{
 
 button{
   padding:10px;
+  cursor:pointer;
 }
 
 /* Cards */
@@ -128,7 +126,7 @@ button{
   border-radius:5px;
 }
 
-/* 🔥 Floating Dark Mode Button */
+/* Dark Mode Button */
 .dark-toggle {
   position: fixed;
   bottom: 20px;
@@ -148,31 +146,35 @@ button{
 /* MOBILE */
 @media(max-width:768px){
 
+  /* Show hamburger */
+  .hamburger{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
+
+  /* Mobile menu */
   .menu{
-    display:none;
-    flex-direction:column;
+    display: none;
+    flex-direction: column;
     background:#222;
-    position:fixed; /* fixed menu for mobile */
-    top:60px;
-    right:0;
-    width:200px;
-    text-align:center;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
     height: calc(100% - 60px);
-    padding-top:20px;
-    transition: 0.3s;
+    padding-top: 20px;
+    text-align: center;
     z-index: 1000;
+  }
+
+  .menu.active{
+    display: flex;
   }
 
   .menu a{
     margin:15px 0;
-  }
-
-  .menu.active{
-    display:flex;
-  }
-
-  .hamburger{
-    display:block; /* show hamburger on mobile */
   }
 }
 </style>
@@ -186,11 +188,11 @@ button{
   <div class="logo">My Project</div>
 
   <div class="menu" id="menu">
-    <a href="index.html", target=blank>Home</a>
-    <a href="login.html", target=blank>Login-Page</a>
-    <a href="registration.html", target=blank>Register-Page</a>
-    <a href="calculator.html", target=blank>Calculator</a>
-    <a href="currency.html", target=blank>Currency</a>
+    <a href="index.html" target="_blank">Home</a>
+    <a href="login.html" target="_blank">Login</a>
+    <a href="registration.html" target="_blank">Register</a>
+    <a href="calculator.html" target="_blank">Calculator</a>
+    <a href="currency.html" target="_blank">Currency</a>
   </div>
 
   <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
@@ -214,31 +216,31 @@ button{
 
   <div class="card">
     <i class="fas fa-user"></i>
-    <h3>Login-Page</h3>
-    <a href="login.html", target=blank>Open</a>
+    <h3>Login</h3>
+    <a href="login.html" target="_blank">Open</a>
   </div>
 
   <div class="card">
     <i class="fas fa-user-plus"></i>
-    <h3>Register-Page</h3>
-    <a href="registration.html", target=blank>Open</a>
+    <h3>Register</h3>
+    <a href="registration.html" target="_blank">Open</a>
   </div>
 
   <div class="card">
     <i class="fas fa-calculator"></i>
     <h3>Calculator</h3>
-    <a href="calculator.html", target=blank>Open</a>
+    <a href="calculator.html" target="_blank">Open</a>
   </div>
 
   <div class="card">
     <i class="fas fa-dollar-sign"></i>
     <h3>Currency</h3>
-    <a href="currency.html", target=blank>Open</a>
+    <a href="currency.html" target="_blank">Open</a>
   </div>
 
 </div>
 
-<!-- 🔥 Floating Dark Mode Button -->
+<!-- Dark Mode Button -->
 <button class="dark-toggle" onclick="toggleMode()">🌙</button>
 
 <script>
