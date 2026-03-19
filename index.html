@@ -24,10 +24,6 @@ body{
   font-size:18px;
 }
 
-.navbar a:hover{
-  text-decoration:underline;
-}
-
 /* Header */
 .header{
   text-align:center;
@@ -37,7 +33,7 @@ body{
 }
 
 /* Search */
-.search-box{
+.search{
   text-align:center;
   margin:30px;
 }
@@ -57,13 +53,12 @@ button{
   justify-content:center;
   flex-wrap:wrap;
   gap:20px;
-  padding:20px;
 }
 
 .card{
   background:white;
   padding:20px;
-  width:220px;
+  width:200px;
   text-align:center;
   border-radius:10px;
   box-shadow:0 0 10px rgba(0,0,0,0.1);
@@ -72,15 +67,11 @@ button{
 .card a{
   display:inline-block;
   margin-top:10px;
-  padding:10px 15px;
+  padding:10px;
   background:#007BFF;
   color:white;
   text-decoration:none;
   border-radius:5px;
-}
-
-.card a:hover{
-  background:#0056b3;
 }
 </style>
 
@@ -100,11 +91,10 @@ button{
 <!-- Header -->
 <div class="header">
   <h1>My Web Project</h1>
-  <p>Multiple tools in one place</p>
 </div>
 
 <!-- Search -->
-<div class="search-box">
+<div class="search">
   <form action="https://www.youtube.com/results">
     <input type="text" name="search_query" placeholder="Search YouTube">
     <button type="submit">Search</button>
@@ -130,7 +120,7 @@ button{
   </div>
 
   <div class="card">
-    <h3>Currency Converter</h3>
+    <h3>Currency</h3>
     <a href="currency.html">Open</a>
   </div>
 
