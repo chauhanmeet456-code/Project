@@ -45,7 +45,6 @@ body{
   color:white;
   margin-left:20px;
   text-decoration:none;
-  font-size:16px;
 }
 
 .menu a:hover{
@@ -57,16 +56,6 @@ body{
   display:none;
   font-size:24px;
   cursor:pointer;
-}
-
-/* Toggle button */
-.toggle{
-  background:#00bcd4;
-  border:none;
-  padding:8px 10px;
-  cursor:pointer;
-  border-radius:5px;
-  margin-left:10px;
 }
 
 /* Header */
@@ -191,12 +180,12 @@ button{
     <a href="registration.html">Register</a>
     <a href="calculator.html">Calculator</a>
     <a href="currency.html">Currency</a>
+
+    <!-- Dark Mode inside menu -->
+    <a href="#" onclick="toggleMode()">🌙 Dark Mode</a>
   </div>
 
-  <div>
-    <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
-    <button class="toggle" onclick="toggleMode()">🌙</button>
-  </div>
+  <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
 </div>
 
 <!-- Header -->
