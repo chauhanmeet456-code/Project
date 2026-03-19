@@ -30,6 +30,7 @@ body{
   color:white;
 }
 
+/* Logo */
 .logo{
   font-size:20px;
   font-weight:bold;
@@ -50,11 +51,15 @@ body{
   color:#00bcd4;
 }
 
-/* Hamburger */
-.hamburger{
-  display:none;
-  font-size:24px;
-  cursor:pointer;
+/* Hamburger fix for top-right */
+.hamburger {
+  position: fixed; /* fixed top-right */
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* desktop hide */
 }
 
 /* Header */
@@ -123,20 +128,21 @@ button{
   border-radius:5px;
 }
 
-/* 🔥 FLOATING DARK BUTTON */
-.dark-toggle{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#00bcd4;
-  color:white;
-  border:none;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  font-size:20px;
-  cursor:pointer;
-  box-shadow:0 0 10px rgba(0,0,0,0.3);
+/* 🔥 Floating Dark Mode Button */
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
 
 /* MOBILE */
@@ -146,11 +152,15 @@ button{
     display:none;
     flex-direction:column;
     background:#222;
-    position:absolute;
+    position:fixed; /* fixed menu for mobile */
     top:60px;
-    left:0;
-    width:100%;
+    right:0;
+    width:200px;
     text-align:center;
+    height: calc(100% - 60px);
+    padding-top:20px;
+    transition: 0.3s;
+    z-index: 1000;
   }
 
   .menu a{
@@ -162,7 +172,7 @@ button{
   }
 
   .hamburger{
-    display:block;
+    display:block; /* show hamburger on mobile */
   }
 }
 </style>
@@ -177,8 +187,8 @@ button{
 
   <div class="menu" id="menu">
     <a href="index.html">Home</a>
-    <a href="login.html">Login</a>
-    <a href="registration.html">Register</a>
+    <a href="login.html">Login-Page</a>
+    <a href="registration.html">Register-Page</a>
     <a href="calculator.html">Calculator</a>
     <a href="currency.html">Currency</a>
   </div>
@@ -193,7 +203,7 @@ button{
 
 <!-- Search -->
 <div class="search">
-  <form action="https://www.youtube.com/results">
+  <form action="https://www.youtube.com/results" target="_blank">
     <input type="text" name="search_query" placeholder="Search YouTube">
     <button type="submit">Search</button>
   </form>
@@ -204,26 +214,26 @@ button{
 
   <div class="card">
     <i class="fas fa-user"></i>
-    <h3>Login</h3>
-    <a href="login.html">Open</a>
+    <h3>Login-Page</h3>
+    <a href="login.html", target=blank>Open</a>
   </div>
 
   <div class="card">
     <i class="fas fa-user-plus"></i>
-    <h3>Register</h3>
-    <a href="registration.html">Open</a>
+    <h3>Register-Page</h3>
+    <a href="registration.html", target=blank>Open</a>
   </div>
 
   <div class="card">
     <i class="fas fa-calculator"></i>
     <h3>Calculator</h3>
-    <a href="calculator.html">Open</a>
+    <a href="calculator.html", target=blank>Open</a>
   </div>
 
   <div class="card">
     <i class="fas fa-dollar-sign"></i>
     <h3>Currency</h3>
-    <a href="currency.html">Open</a>
+    <a href="currency.html", target=blank>Open</a>
   </div>
 
 </div>
