@@ -23,7 +23,7 @@ if(!user){
 
         // Make username visible on all devices/backgrounds
         // Prefer CSS, but fallback inline for immediate fix
-        text.style.color = "#000";       // Black text for light background
+        text.style.color = "#fff";       // Black text for light background
         text.style.fontWeight = "bold";
         text.style.fontSize = "18px";
     }
