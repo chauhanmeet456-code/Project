@@ -39,7 +39,7 @@ body{
 }
 
 #welcomeText {
-    color: black !important;   /* override any inherited white color */
+    color: black !important;  /* text always visible */
     font-weight: bold;
     font-size: 18px;
 }

@@ -1,6 +1,3 @@
-//  Login Protection + Logout + Back Button Fix
-
-
 // Prevent cached page showing after logout/back button
 window.history.replaceState(null, null, window.location.href);
 window.onpageshow = function(event) {
@@ -9,6 +6,7 @@ window.onpageshow = function(event) {
         window.location.reload();
     }
 }
+
 
 // CHECK LOGIN (PROTECT PAGE)
 
@@ -22,11 +20,15 @@ if(!user){
     const text = document.getElementById("welcomeText");
     if(text){
         text.innerText = "Welcome " + user;
-        text.style.color = "#000";      // Black color visible on mobile/desktop
+
+        // Make username visible on all devices/backgrounds
+        // Prefer CSS, but fallback inline for immediate fix
+        text.style.color = "#000";       // Black text for light background
         text.style.fontWeight = "bold";
         text.style.fontSize = "18px";
     }
 }
+
 
 // LOGOUT FUNCTION
 
@@ -34,4 +36,3 @@ function logout(){
     localStorage.removeItem("user");      // Clear user session
     window.location.href = "login.html";  // Redirect to login
 }
-
