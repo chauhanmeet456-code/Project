@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function(){
         localStorage.setItem("user", username);
 
         // REDIRECT
-        window.location.href = "home.html";
+        window.location.href = "page-2.html";
 
       } else {
         alert("Wrong Username or Password ❌");
