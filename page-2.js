@@ -3,7 +3,7 @@ const user = localStorage.getItem("user");
 
 if(!user){
   // જો direct page open કરે → પાછું login
-  window.location.href = "sem-2.html";
+  window.location.href = "loging.html";
 } else {
   // username show
   const text = document.getElementById("welcomeText");
