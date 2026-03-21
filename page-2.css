@@ -1,0 +1,39 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0d0d0d;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+/* SUCCESS BOX */
+.success-box{
+  background:#1a1a1a;
+  padding:40px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  animation:fadeIn 0.8s ease;
+}
+
+.success-box h1{
+  color:#00ffff;
+  margin-bottom:10px;
+}
+
+.success-box button{
+  margin-top:20px;
+  padding:10px 20px;
+  border:none;
+  background:#00ffff;
+  cursor:pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
