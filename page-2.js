@@ -16,5 +16,5 @@ if(!user){
 /* LOGOUT */
 function logout(){
   localStorage.removeItem("user");
-  window.location.href = "home.html";
+  window.location.href = "login.html";
 }
