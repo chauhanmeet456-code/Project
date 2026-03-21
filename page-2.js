@@ -1,6 +1,5 @@
-// ================================
-// PAGE-2.JS - Login Protection + Logout + Back Button Fix
-// ================================
+//  Login Protection + Logout + Back Button Fix
+
 
 // Prevent cached page showing after logout/back button
 window.history.replaceState(null, null, window.location.href);
@@ -11,9 +10,8 @@ window.onpageshow = function(event) {
     }
 }
 
-// -------------------------------
 // CHECK LOGIN (PROTECT PAGE)
-// -------------------------------
+
 const user = localStorage.getItem("user");
 
 if(!user){
@@ -30,10 +28,10 @@ if(!user){
     }
 }
 
-// -------------------------------
 // LOGOUT FUNCTION
-// -------------------------------
+
 function logout(){
     localStorage.removeItem("user");      // Clear user session
     window.location.href = "login.html";  // Redirect to login
 }
+

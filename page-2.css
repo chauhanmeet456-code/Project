@@ -37,3 +37,9 @@ body{
   from{opacity:0; transform:translateY(20px);}
   to{opacity:1; transform:translateY(0);}
 }
+
+#welcomeText {
+    color: black !important;   /* override any inherited white color */
+    font-weight: bold;
+    font-size: 18px;
+}
