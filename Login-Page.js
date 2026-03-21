@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(){
      MULTIPLE USERS LOGIN
   ========================= */
   const users = [
-    { username: "admin", password: "123" },
+    { username: "Admin", password: "123" },
     { username: "ajay", password: "111" },
     { username: "Brijesh", password: "002" }
   ];
