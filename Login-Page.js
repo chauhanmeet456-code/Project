@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const users = [
     { username: "admin", password: "123" },
     { username: "ajay", password: "111" },
-    { username: "brijesh", password: "222" }
+    { username: "Brijesh", password: "002" }
   ];
 
   const loginForm = document.getElementById("loginForm");
