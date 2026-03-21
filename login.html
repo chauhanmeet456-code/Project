@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="Login-Page.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+
+<link rel="stylesheet" href="sem-2.css">
 </head>
+
 <body>
-    <button class="theme-btn" id="themeToggle">🌙</button>
+
+<button class="theme-btn" id="themeToggle">🌙</button>
+
 <div class="form-container">
   <h2>Login</h2>
 
-  <div class="input-box">
-    <input type="text" required placeholder=" ">
-    <span>Username</span>
-  </div>
+  <form id="loginForm">
 
-  <div class="input-box password-box">
-    <input type="password" id="password" required placeholder=" ">
-    <span>Password</span>
+    <div class="input-box">
+      <input type="text" id="username" required placeholder=" ">
+      <span>Username</span>
+    </div>
 
-    <!-- Eye Icon -->
-    <i class="eye" id="togglePassword">👁</i>
-  </div>
+    <div class="input-box password-box">
+      <input type="password" id="password" required placeholder=" ">
+      <span>Password</span>
+      <i class="eye" id="togglePassword">👁</i>
+    </div>
 
-  <button class="submit-btn">Login</button>
+    <button class="submit-btn" type="submit">Login</button>
+<p class="login-info">
+  ex: admin / 123
+</p>
+  </form>
 </div>
-<script src="Login-Page.js"></script>
+
+<script src="sem-2.js"></script>
+
 </body>
 </html>

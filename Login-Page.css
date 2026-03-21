@@ -137,9 +137,24 @@ color:var(--neon);
 
 /* MOBILE */
 @media(max-width:480px){
-
 .form-container{
 width:100%;
 }
+}
 
+.eye::before,
+.eye::after{
+content:none !important;
+}
+
+.form-container{
+  position:relative; /* already હોય તો fine */
+}
+
+.login-info{
+  position:absolute;
+  bottom:10px;
+  left:15px;
+  font-size:13px;
+  color:#aaa;
 }
