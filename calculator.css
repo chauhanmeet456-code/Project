@@ -11,11 +11,9 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
-    /* background-image: url(''); */
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
+/* Calculator Box */
 .calculator {
     border: 1px solid #717377;
     padding: 20px;
@@ -24,6 +22,7 @@ body {
     box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
 }
 
+/* Input Box */
 input {
     width: 320px;
     border: none;
@@ -35,12 +34,14 @@ input {
     text-align: right;
     cursor: pointer;
     color: #ffffff;
+    outline: none;
 }
 
 input::placeholder{
      color: #ffffff;
 }
 
+/* Buttons */
 button{
     border: none;
     width: 60px;
@@ -52,16 +53,39 @@ button{
     font-size: 20px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
     cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
+/* Hover effect */
+button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.9);
+}
+
+/* Remove focus outline */
+button:focus {
+    outline: none;
+}
+
+/* Equal button */
 .equalBtn{
     background-color: #fb7c14;
+    color: #fff;
 }
 
+/* Operator buttons */
 .operator{
     color: #6dee0a;
+    font-weight: bold;
 }
 
+/* Title */
 p {
   position: absolute;
   top: 20px;
@@ -77,11 +101,12 @@ p {
   -webkit-background-clip: text;
   background-clip: text;
 
-  color: transparent;                 /* IMPORTANT */
+  color: transparent;
   -webkit-text-fill-color: transparent;
   animation: moveBg 6s linear infinite;
 }
 
+/* Animation */
 @keyframes moveBg {
   0% {
     background-position: 0% 50%;
@@ -90,4 +115,3 @@ p {
     background-position: 100% 50%;
   }
 }
-

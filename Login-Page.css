@@ -121,6 +121,7 @@ font-weight:bold;
 cursor:pointer;
 color:#000;
 background:linear-gradient(90deg,var(--neon),#00ff80);
+outline: none;
 }
 
 /* THEME BUTTON */
@@ -133,6 +134,7 @@ border:none;
 font-size:22px;
 cursor:pointer;
 color:var(--neon);
+outline: none;
 }
 
 /* MOBILE */

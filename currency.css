@@ -3,6 +3,7 @@ body{
   background:#f2f2f2;
   padding:15px;
 }
+
 .card{
   background:#fff;
   max-width:420px;
@@ -11,6 +12,7 @@ body{
   border-radius:12px;
   box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
+
 h2{margin-bottom:15px}
 input,button{
   width:100%;
@@ -19,13 +21,17 @@ input,button{
   font-size:16px;
   border-radius:8px;
   border:1px solid #ccc;
+  outline: none;
 }
+
 button{
   background:#00bcd4;
   color:#fff;
   border:none;
   cursor:pointer;
+  outline: none;
 }
+
 button.secondary{background:#00acc1;}
 .select-box{
   border:1px solid #ccc;
@@ -35,6 +41,7 @@ button.secondary{background:#00acc1;}
   cursor:pointer;
   background:#fff;
 }
+
 #result{
   margin-top:12px;
   font-weight:bold;
@@ -47,8 +54,6 @@ button.secondary{background:#00acc1;}
   inset:0;
   background:rgba(0,0,0,.5);
   display:none;
-
-  /* IMPORTANT FIX */
   display:flex;
   align-items:center;
   justify-content:center;

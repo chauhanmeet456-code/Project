@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* =========================
-     PASSWORD TOGGLE
-  ========================= */
+  //   PASSWORD TOGGLE
   const passwordInput = document.getElementById("password");
   const eyeIcon = document.getElementById("togglePassword");
 
@@ -17,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 
-  /* =========================
-     DARK / LIGHT MODE
-  ========================= */
+ 
+  //  DARK / LIGHT MODE
+
   const themeBtn = document.getElementById("themeToggle");
 
   if(themeBtn){
@@ -32,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
 
-  /* =========================
-     MULTIPLE USERS LOGIN
-  ========================= */
+
+    //  MULTIPLE USERS LOGIN
+
   const users = [
     { username: "Admin", password: "123" },
     { username: "Ajay", password: "111" },
