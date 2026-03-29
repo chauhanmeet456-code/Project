@@ -3,7 +3,6 @@
 <head>
 <title>My Web Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -68,6 +67,43 @@ body{
   padding:30px;
   background:#007BFF;
   color:white;
+}
+
+/* AUTOMATIC COLOR FILL TEXT */
+.header h1{
+  font-size: 42px;
+  font-weight: bold;
+  color: white; /* normal base text */
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* moving color fill line */
+.header h1::before{
+  content: "My Web Project";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: red; 
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0px solid red; 
+  animation: fillLine 4s linear infinite;
+}
+
+@keyframes fillLine{
+  0%{
+    width: 0%;
+  }
+  50%{
+    width: 100%;
+  }
+  100%{
+    width: 0%;
+  }
 }
 
 /* Search */
@@ -180,6 +216,10 @@ button{
   .menu a{
     margin:15px 0;
   }
+
+  .header h1{
+    font-size: 30px;
+  }
 }
 
 .footer {
@@ -286,6 +326,7 @@ function toggleMenu(){
   icon.classList.toggle("fa-times");
 }
 </script>
+
 <!-- Footer -->
 <footer class="footer">
   <div class="social-links">
@@ -296,8 +337,8 @@ function toggleMenu(){
     <a href="https://t.me/Meet_chauhan_456" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
   </div>
   <p>&copy; 2026 My Project. All rights reserved.</p>
-  <P>@ Created By Meet Chauhan.</P>
+  <p>@ Created By Meet Chauhan.</p>
 </footer>
 
 </body>
-</html>
+</html> 
