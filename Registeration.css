@@ -15,6 +15,20 @@ letter-spacing:2px;
 text-shadow:2px 2px 5px rgba(0,0,0,0.3);
 }
 
+h1::before{
+  content: "STUDENT REGISTRATION FORM";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: red; 
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0px solid red; 
+  animation: fillLine 4s linear infinite;
+}
+
 /* FORM BOX */
 
 .form-box{

@@ -232,19 +232,45 @@ button{
 
 .footer .social-links {
     margin-bottom: 5px;
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
 }
 
 .footer .social-links a {
-    color: white;
     font-size: 28px;
-    margin: 0 12px;
-    transition: transform 0.3s, color 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
 
-.footer .social-links a:hover {
-    transform: scale(1.2);
-    color: #00bcd4;
+/* Default brand colors */
+.footer .social-links a.whatsapp {
+    color: #129c15cc;
 }
+
+.footer .social-links a.instagram {
+    color: #E1306C;
+}
+
+.footer .social-links a.github {
+    color: #ffffff;
+}
+
+.footer .social-links a.linkedin {
+    color: #0A66C2;
+}
+
+.footer .social-links a.telegram {
+    color: #20e5f3;
+}
+
+/* Hover effect */
+.footer .social-links a:hover {
+    transform: translateY(-8px) scale(1.2);
+}
+
 </style>
 
 </head>
@@ -330,11 +356,11 @@ function toggleMenu(){
 <!-- Footer -->
 <footer class="footer">
   <div class="social-links">
-    <a href="https://wa.me/917990682016" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.instagram.com/meet_chauahn_456?igsh=MW9haDZyenV1N3psbg==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/meet-chauhan-014966399" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/chauhanmeet456-code" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-    <a href="https://t.me/Meet_chauhan_456" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me/917990682016" target="_blank" title="WhatsApp" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/meet_chauahn_456?igsh=MW9haDZyenV1N3psbg==" target="_blank" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/meet-chauhan-014966399" target="_blank" title="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/chauhanmeet456-code" target="_blank" title="GitHub" class="github"><i class="fab fa-github"></i></a>
+    <a href="https://t.me/Meet_chauhan_456" target="_blank" title="Telegram" class="telegram"><i class="fab fa-telegram"></i></a>
   </div>
   <p>&copy; 2026 My Project. All rights reserved.</p>
   <p>@ Created By Meet Chauhan.</p>

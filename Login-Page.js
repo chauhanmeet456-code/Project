@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-
+  
   //   PASSWORD TOGGLE
   const passwordInput = document.getElementById("password");
   const eyeIcon = document.getElementById("togglePassword");
@@ -37,7 +37,13 @@ document.addEventListener("DOMContentLoaded", function(){
     { username: "Admin", password: "123" },
     { username: "Ajay", password: "111" },
     { username: "Brijesh", password: "002" },
-    { username: "Meet", password: "456"}
+    { username: "Meet", password: "456"},
+    { username: "Sumit", password: "123"},
+    { username: "Takshik", password: "123"},
+    { username: "Hiten", password: "123"},
+    { username: "Yogiraj", password: "123"},
+    { username: "Yash", password: "123"},
+    { username: "Nirav", password: "123"},    
   ];
 
   const loginForm = document.getElementById("loginForm");
