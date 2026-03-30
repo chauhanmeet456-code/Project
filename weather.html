@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Compare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+  <div class="ambient ambient-3"></div>
+
+  <main class="app-shell">
+    <section class="hero">
+      <h1>Compare weather</h1>
+      <p class="hero-sub">
+        Fast, clean and premium weather comparison with a modern interface.
+      </p>
+    </section>
+
+    <section class="search-panel glass">
+      <div class="search-head">
+        <h2>Search Cities</h2>
+        <p>Enter two Indian cities to compare live weather.</p>
+      </div>
+
+      <div class="search-grid">
+        <div class="input-wrapper">
+          <label for="city1">First City</label>
+          <input type="text" id="city1" placeholder="Ahmedabad" autocomplete="off">
+          <ul class="suggestions" id="suggestions1"></ul>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="city2">Second City</label>
+          <input type="text" id="city2" placeholder="Botad" autocomplete="off">
+          <ul class="suggestions" id="suggestions2"></ul>
+        </div>
+
+        <button id="compareBtn">Compare Weather</button>
+      </div>
+    </section>
+
+    <section class="weather-section">
+      <div class="weather-card glass" id="result1">
+        <div class="placeholder">
+          <div class="weather-icon">🌆</div>
+          <h2>First City</h2>
+          <p>Search your first Indian city</p>
+        </div>
+      </div>
+
+      <div class="weather-card glass" id="result2">
+        <div class="placeholder">
+          <div class="weather-icon">🏙</div>
+          <h2>Second City</h2>
+          <p>Search your second Indian city</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="weather.js"></script>
+</body>
+</html>
