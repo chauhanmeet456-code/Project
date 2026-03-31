@@ -108,12 +108,18 @@ body{
 }
 
 input{
-  padding:10px;
   width:70%;
   max-width:300px;
-  border:1px solid #ccc;
+  border:2px solid white;
   border-radius:5px;
   outline:none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: black;   /* Light mode માં black */
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
 button{
@@ -122,6 +128,22 @@ button{
   outline:none;
   border:none;
   border-radius:5px;
+  background-color: black;
+  color: white;
+  border: 2px solid silver;
+}
+
+button:hover{
+  background: #333;
+}
+
+body.dark .search button{
+  background: white;   /* Dark mode માં white */
+  color: black;
+}
+
+body.dark .search button:hover{
+  background: #ddd;
 }
 
 /* Cards */
