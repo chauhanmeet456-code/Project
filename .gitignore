@@ -1,0 +1,32 @@
+# Windows system files
+NTUSER.DAT*
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Common folders not needed
+AppData/
+Documents/
+Downloads/
+Contacts/
+Favorites/
+Links/
+Music/
+Pictures/
+Videos/
+Saved Games/
+OneDrive/
+
+# IDE / environment
+.vscode/
+.android/
+.idlerc/
+.local/
+.matplotlib/
+
+# Node / JS
+node_modules/
+package-lock.json
+
+# Other temp / lock files
+*.lock
