@@ -404,8 +404,31 @@ function initApp() {
   }
 
   if (menuToggle && navbar) {
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", function () {
       navbar.classList.toggle("active");
+
+      if (navbar.classList.contains("active")) {
+        menuToggle.textContent = "✖";
+      } else {
+        menuToggle.textContent = "☰";
+      }
+    });
+
+    const navLinks = navbar.querySelectorAll("a");
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 768) {
+          navbar.classList.remove("active");
+          menuToggle.textContent = "☰";
+        }
+      });
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768) {
+        navbar.classList.remove("active");
+        menuToggle.textContent = "☰";
+      }
     });
   }
 }

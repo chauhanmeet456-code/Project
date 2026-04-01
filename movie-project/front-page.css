@@ -61,12 +61,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  gap: 15px;
 }
 
 .logo {
@@ -75,10 +73,22 @@ header {
   font-weight: bold;
 }
 
+#menu-toggle {
+  display: none;
+  background: #facc15;
+  color: #111827;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Desktop Nav */
 nav {
   display: flex;
+  align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 nav a {
@@ -93,12 +103,12 @@ nav a:hover {
   color: #facc15;
 }
 
-.header-buttons {
+/* Nav Buttons */
+.nav-buttons {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  align-items: center;
 }
-
 
 #login-btn,
 #logout-btn,
@@ -111,6 +121,7 @@ nav a:hover {
   transition: 0.3s;
   text-decoration: none;
   display: inline-block;
+  text-align: center;
 }
 
 #login-btn {
@@ -138,17 +149,6 @@ nav a:hover {
 
 #theme-toggle:hover {
   background: #059669;
-}
-
-#menu-toggle {
-  display: none;
-  background: #facc15;
-  color: #111827;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 22px;
-  cursor: pointer;
 }
 
 /* Hero */
@@ -180,7 +180,6 @@ nav a:hover {
   color: red;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 0px solid red;
   animation: typing 2.5s steps(22) infinite, blink 0.7s infinite;
 }
 
@@ -387,28 +386,38 @@ footer {
 @media (max-width: 768px) {
   header {
     padding: 15px 5%;
-    flex-direction: row;
-    justify-content: space-between;
+    position: relative;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .logo {
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
+    flex: 1;
   }
 
   #menu-toggle {
     display: block;
     order: -1;
+    margin-right: 10px;
   }
 
   nav {
     display: none;
-    width: 100%;
-    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    right: 5%;
     background: #111827;
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 10px;
+    border-radius: 14px;
+    padding: 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    z-index: 3000;
   }
 
   nav.active {
@@ -416,13 +425,28 @@ footer {
   }
 
   nav a {
-    padding: 10px 0;
-    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
   }
 
-  .header-buttons {
+  .nav-buttons {
     width: 100%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #login-btn,
+  #logout-btn,
+  #theme-toggle {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
   }
 
   .hero {
@@ -450,10 +474,7 @@ footer {
     align-items: center;
   }
 
-  .hero button,
-  #theme-toggle,
-  #login-btn,
-  #logout-btn{
+  .hero button {
     width: 90%;
     max-width: 260px;
     text-align: center;
@@ -492,7 +513,12 @@ footer {
 /* Small Mobile */
 @media (max-width: 480px) {
   .logo {
-    font-size: 19px;
+    font-size: 17px;
+  }
+
+  #menu-toggle {
+    font-size: 22px;
+    padding: 8px 10px;
   }
 
   .hero-title {
@@ -528,4 +554,17 @@ footer {
   .user-card img {
     height: 220px;
   }
+}
+
+/* Light Mode Mobile Menu */
+body.light-mode nav {
+  background: #e2e8f0;
+}
+
+body.light-mode nav a {
+  color: #111827;
+}
+
+body.light-mode nav a:hover {
+  color: #f59e0b;
 }
