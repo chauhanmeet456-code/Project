@@ -1,98 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Web Project</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-  <div class="logo">My Project</div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">My Project</div>
 
-  <div class="menu" id="menu">
-    <a href="index.html" target="_blank">Home</a>
-    <a href="login.html" target="_blank">Login</a>
-    <a href="registration.html" target="_blank">Register</a>
-    <a href="calculator.html" target="_blank">Calculator</a>
-    <a href="currency.html" target="_blank">Currency</a>
-    <a href="weather.html" target="_blank">Weather Compare</a>
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="registration.html">Register</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="currency.html">Currency</a>
+      <a href="weather.html">Weather Compare</a>
+      <a href="movie-project/index.html">Movie Streaming</a>
+    </div>
+
+    <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
   </div>
 
-  <i class="fas fa-bars hamburger" id="hamburger" onclick="toggleMenu()"></i>
-</div>
-
-<!-- Header -->
-<div class="header">
-  <h1>My Web Project</h1>
-</div>
-
-<!-- Search -->
-<div class="search">
-  <form action="https://www.youtube.com/results" target="_blank">
-    <input type="text" name="search_query" placeholder="Search On YouTube" required>
-    <button type="submit">Search</button>
-  </form>
-</div>
-
-<!-- Cards -->
-<div class="container">
-
-  <div class="card">
-    <i class="fas fa-user"></i>
-    <h3>Login</h3>
-    <a href="login.html" target="_blank">Open</a>
+  <!-- Header -->
+  <div class="header">
+    <h1>My Web Project</h1>
   </div>
 
-  <div class="card">
-    <i class="fas fa-user-plus"></i>
-    <h3>Register</h3>
-    <a href="registration.html" target="_blank">Open</a>
+  <!-- Search -->
+  <div class="search">
+    <form action="https://www.youtube.com/results" target="_blank">
+      <input type="text" name="search_query" placeholder="Search On YouTube" required>
+      <button type="submit">Search</button>
+    </form>
   </div>
 
-  <div class="card">
-    <i class="fas fa-calculator"></i>
-    <h3>Calculator</h3>
-    <a href="calculator.html" target="_blank">Open</a>
+  <!-- Cards -->
+  <div class="container">
+
+    <div class="card">
+      <i class="fas fa-user"></i>
+      <h3>Login</h3>
+      <a href="login.html">Open</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-user-plus"></i>
+      <h3>Register</h3>
+      <a href="registration.html">Open</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-calculator"></i>
+      <h3>Calculator</h3>
+      <a href="calculator.html">Open</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-dollar-sign"></i>
+      <h3>Currency</h3>
+      <a href="currency.html">Open</a>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-cloud"></i>
+      <h3>Weather Compare</h3>
+      <a href="weather.html">Open</a>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-film"></i>
+      <h3>Movie Streaming</h3>
+      <a href="movie-project/index.html">Open</a>
+    </div>
+
   </div>
 
-  <div class="card">
-    <i class="fas fa-dollar-sign"></i>
-    <h3>Currency</h3>
-    <a href="currency.html" target="_blank">Open</a>
-  </div>
+  <!-- Dark Mode Button -->
+  <button class="dark-toggle" onclick="toggleMode()" id="themeBtn">🌙</button>
 
-  <div class="card">
-    <i class="fa-solid fa-cloud"></i>
-    <h3>Weather Compare</h3>
-    <a href="weather.html" target="_blank">Open</a>
-  </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://wa.me/917990682016" target="_blank" title="WhatsApp" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/meet_chauahn_456?igsh=MW9haDZyenV1N3psbg==" target="_blank" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/meet-chauhan-014966399" target="_blank" title="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/chauhanmeet456-code" target="_blank" title="GitHub" class="github"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/Meet_chauhan_456" target="_blank" title="Telegram" class="telegram"><i class="fab fa-telegram"></i></a>
+    </div>
 
-</div>
+    <p>&copy; 2026 My Project. All rights reserved.</p>
+    <p>@ Created By Meet Chauhan.</p>
+  </footer>
 
-
-<!-- Dark Mode Button -->
-<button class="dark-toggle" onclick="toggleMode()" id="themeBtn">🌙</button>
-<script src="script.js"></script>
-
-<!-- Footer -->
-<footer class="footer">
-
-  <div class="social-links">
-    <a href="https://wa.me/917990682016" target="_blank" title="WhatsApp" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.instagram.com/meet_chauahn_456?igsh=MW9haDZyenV1N3psbg==" target="_blank" title="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/meet-chauhan-014966399" target="_blank" title="LinkedIn" class="linkedin"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/chauhanmeet456-code" target="_blank" title="GitHub" class="github"><i class="fab fa-github"></i></a>
-    <a href="https://t.me/Meet_chauhan_456" target="_blank" title="Telegram" class="telegram"><i class="fab fa-telegram"></i></a>
-  </div>
-
-  <p>&copy; 2026 My Project. All rights reserved.</p>
-  <p>@ Created By Meet Chauhan.</p>
-  
-</footer>
-
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
