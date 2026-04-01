@@ -63,6 +63,11 @@ body.dark {
   cursor: pointer;
   display: none;
   color: white;
+  transition: 0.3s ease;
+}
+
+.hamburger:hover {
+  color: #00bcd4;
 }
 
 /* Header */
