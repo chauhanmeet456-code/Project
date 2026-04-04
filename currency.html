@@ -1,37 +1,40 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Currency Converter</title>
-<link rel="stylesheet" href="currency.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="currency.css">
 </head>
 <body>
 
-<div class="card">
-  <h2>🌍 Currency Converter</h2>
+  <div class="card">
+    <h2>🌍 Currency Converter</h2>
 
-  <input type="number" id="amount" placeholder="Enter amount">
+    <input type="number" id="amount" placeholder="Enter amount" min="0" step="any">
 
-  <div class="select-box" onclick="openPopup('from')">
-    <span id="fromText">🇮🇳 India – Indian Rupee (INR)</span>
+    <div class="select-box" onclick="openPopup('from')">
+      <span id="fromText">🇮🇳 India – Indian Rupee (INR)</span>
+    </div>
+
+    <div class="select-box" onclick="openPopup('to')">
+      <span id="toText">🇺🇸 United States – US Dollar (USD)</span>
+    </div>
+
+    <button id="convertBtn">Convert</button>
+    <button class="secondary" onclick="reverseCurrency()">🔁 Reverse</button>
+
+    <p id="result">Ready to convert</p>
   </div>
 
-  <div class="select-box" onclick="openPopup('to')">
-    <span id="toText">🇺🇸 United States – US Dollar (USD)</span>
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <input type="text" id="search" placeholder="Search country or currency">
+      <ul id="countryList"></ul>
+    </div>
   </div>
 
-  <button id="convertBtn">Convert</button>
-  <button class="secondary" onclick="reverseCurrency()">🔁 Reverse</button>
-
-  <p id="result"></p>
-</div>
-
-<div id="popup" class="popup">
-  <div class="popup-box">
-    <input type="text" id="search" placeholder="Search country or currency">
-    <ul id="countryList"></ul>
-  </div>
-</div>
-<script src="currency.js"></script>
+  <script src="currency.js"></script>
 </body>
 </html>
