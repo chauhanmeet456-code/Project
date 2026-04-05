@@ -23,7 +23,7 @@ const movies = {
   },
   "3idiots": {
     title: "3 Idiots",
-    youtube: "https://www.youtube.com/embed/K0eDlFX9GMc?autoplay=1&rel=0"
+    youtube: "https://www.youtube.com/embed/K0eDlFX9GMc"
   },
   "kgf": {
     title: "KGF",
