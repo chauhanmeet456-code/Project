@@ -43,7 +43,7 @@ window.onload = function () {
   }
 
   // Auto close menu after clicking link
-  menuLinks.forEach(link => {
+  menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
       menu.classList.remove("active");
       icon.classList.remove("fa-times");
@@ -51,3 +51,23 @@ window.onload = function () {
     });
   });
 };
+
+let count = 0;
+
+let interval = setInterval(() => {
+  count++;
+
+  document.getElementById("percent").innerText = count + "%";
+  document.getElementById("bar").style.width = count + "%";
+
+  if (count >= 100) {
+    clearInterval(interval);
+
+    setTimeout(() => {
+      alert("Welcome to My Website 🚀");
+      document.getElementById("loader").style.display = "none";
+
+      document.getElementById("content").classList.add("show");
+    }, 500);
+  }
+}, 25);
